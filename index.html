@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <!-- Settings of the HTML document -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Techub</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <img
+            class="logo"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF3Yb7kDIGbdQzvX1IKgqzTRp8IThTcjSCyZTZRa0KWB-9vHNC"
+          />
+        </div>
+        <span class="fa fa-bars menu-icon"></span>
+        <div class="header-right">
+          <a href="#">
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Lessons</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#">C</a>
+                <a href="#">JAVA</a>
+                <a href="#">PYTHON</a>
+                <a href="#">LISP</a>
+              </div>
+            </div>
+          </a>
+          
+          <a href="#" class="login">Log in</a>
+        </div>
+      </div>
+    </header>
+    <!-- Top -->
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>TECHUB!</h1>
+        <h1>THINK TWICE CODE ONCE.</h1>
+        <p>TECHUB WILL HELP YOU DEVELOP YOUR CODING SKILLS!</p>
+        <p>
+          We offer you a fully equipped coding environment to get you started.
+        </p>
+        <div class="btn-wrapper">
+          <a href="#" class="btn signup">Sign up with Email</a>
+          <p>or</p>
+          <a href="#" class="btn facebook"
+            ><span class="fa fa-facebook"></span>Sign up with Facebook</a
+          >
+          <a href="#" class="btn twitter"
+            ><span class="fa fa-twitter"></span>Sign up with Twitter</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Sign up modal -->
+    <div class="signup-modal-wrapper" id="signup-modal">
+      <div class="modal">
+        <div class="close-modal">
+          <i class="fa fa-2x fa-times">×</i>
+        </div>
+        <div id="signup-form">
+          <h2>Sign up with email</h2>
+          <form action="#">
+            <input class="form-control" type="text" placeholder="Email" />
+            <input
+              class="form-control"
+              type="password"
+              placeholder="Password"
+            />
+            <div id="submit-btn">Sign up</div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Lesson -->
+    <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Programs must be written for people to read, and only incidentally for machines to execute
+
+            !</h2>
+        </div>
+        <div class="lessons">
+          <div class="lesson">
+            <div class="lesson-icon">
+              
+              <img src="https://cdn01.alison-static.net/courses/504/alison_courseware_intro_504.jpg" height=150 width=200 />
+              <p></p>
+            </div>
+            <p class="text-contents">
+              C is a powerful general-purpose programming language. It is fast, portable and available in all platforms.
+              If you are new to programming, C is a good choice to start your programming journey.
+            </p>
+          </div>
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQFVKxLhA2DS-HLVLvUHFzAOGDrKYRDhVs1AkkxKfGsg9Se8O4c" height=150 width=200 />
+              <p></p>
+            </div>
+            <p class="text-contents">
+              Java is a popular general-purpose programming language and computing platform. It is fast, reliable, and secure.
+            </p>
+          </div>
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="data:image/png;base64,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" height=150 width=200/>
+              <p></p>
+            </div>
+            <p class="text-contents">
+              Python is an interpreted, high-level, general-purpose programming language.
+            </p>
+          </div>
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="data:image/png;base64,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" height=150 widht=200/>
+              <p></p>
+            </div>
+            <p class="text-contents">
+              Lisp is a family of computer programming languages with a long history and a distinctive, fully parenthesized prefix notation.
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Message -->
+    <div class="message-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Ready to start programming ?</h2>
+          <h3>Have an end goal in mind!</h3>
+        </div>
+        <span class="btn message">Start Learning</span>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF3Yb7kDIGbdQzvX1IKgqzTRp8IThTcjSCyZTZRa0KWB-9vHNC" />
+        <p>Learn to code, learn to be creative.</p>
+      </div>
+      <script type="text/javascript" src="script.js"></script>
+    </footer>
+  </body>
+</html>
